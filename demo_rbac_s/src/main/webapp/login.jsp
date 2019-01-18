@@ -71,11 +71,18 @@
         <input type="password" name="password" id="inputPassword" class="form-control" placeholder="密码" value="123" required>
         <button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
 
-        <hr/>
-        <div class="alert alert-warning" role="alert">
-            <h5 class="alert-heading">错误!</h5>
-            <p>您需要登录</p>
-        </div>
+        <%--<hr/>--%>
+        <%--<div class="alert alert-warning" role="alert">--%>
+            <%--<h5 class="alert-heading">错误!</h5>--%>
+            <%--<p>您需要登录</p>--%>
+        <%--</div>--%>
+
+        <c:if test="${error!=null}">
+            <hr/>
+            <div class="alert alert-warning" role="alert">
+                <h5 class="alert-heading">${error}</h5>
+            </div>
+        </c:if>
     </form>
 
 </div> <!-- /container -->

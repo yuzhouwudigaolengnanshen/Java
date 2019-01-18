@@ -33,7 +33,7 @@ public class UserAddServlet extends HttpServlet {
         // 2. 不能通过结果逆推
         // 3. 输入内容一样，运算结果一样; 输入内容即使改动了一个字节，运算结果也会不同
 
-        user.setPassword(Md5Util.md5(password));
+        user.setPassword(password);  //暂时取消MD5加密
         user.setOrgId(orgId);
 
         userDao.insert(user);
